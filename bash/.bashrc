@@ -18,5 +18,5 @@ PS1="\[${COLOR_WHITE}\](\[${COLOR_RED}\]\u\[${COLOR_WHITE}\])\[${COLOR_ORANGE}\]
 
 alias ls='ls -lah --color=auto'
 
-eval `dircolors ~/dircolors.tomorrow`
+eval `dircolors ~/.bash.dircolors.tomorrow`
 alias fotos='cd /mnt/btrfspool/Fotos/'

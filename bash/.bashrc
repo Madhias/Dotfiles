@@ -14,6 +14,9 @@ export COLOR_YELLOW='\e[38;5;228m'
 export COLOR_ORANGE='\e[38;5;221m'
 export COLOR_BLUE='\e[38;5;075m'
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 PS1="\[${COLOR_WHITE}\]\[${COLOR_RED}\]\u\[${COLOR_WHITE}\] \[${COLOR_ORANGE}\]@\[${COLOR_WHITE}\] \[${COLOR_PURPLE}\]\h\[${COLOR_WHITE}\] \[${COLOR_GREEN}\]\w\$: \[${COLOR_NC}\]"
 
 alias ls='ls -lah --color=auto'

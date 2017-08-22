@@ -17,7 +17,7 @@ export COLOR_BLUE='\e[38;5;075m'
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-PS1="\[${COLOR_WHITE}\]\[${COLOR_RED}\]\u\[${COLOR_WHITE}\] \[${COLOR_ORANGE}\]@\[${COLOR_WHITE}\] \[${COLOR_PURPLE}\]\h\[${COLOR_WHITE}\] \[${COLOR_GREEN}\]\w\$: \[${COLOR_NC}\]"
+PS1="[ \u ] @ [ \h ] \w \$:"
 
 alias ls='ls -lah --color=auto'
 alias suvim='sudo -E vim'

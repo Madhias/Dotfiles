@@ -9,6 +9,6 @@ export COLOR_YELLOW='\e[38;5;228m'
 export COLOR_ORANGE='\e[38;5;221m'
 export COLOR_BLUE='\e[38;5;075m'
 
-PS1="[ \u ] @ [ \h ] \w \$:"
+PS1="[ \u ] @ [ \h ] \w \$: "
 
 alias ls='ls -lahG'

@@ -11,4 +11,4 @@ export COLOR_BLUE='\e[38;5;075m'
 
 PS1="\u @ [ \h ] \w \$: "
 
-alias ls='ls -lahG'
+alias ls='ls -lah'

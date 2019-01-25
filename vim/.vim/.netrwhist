@@ -1,10 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/etc/netctl'
-let g:netrw_dirhist_2='/home/matthias/.fonts'
-let g:netrw_dirhist_3='/home/matthias'
-let g:netrw_dirhist_4='/mnt/btrfspool'
-let g:netrw_dirhist_5='/mnt/btrfspool/Drive'
-let g:netrw_dirhist_6='/usr/local'
-let g:netrw_dirhist_7='/usr/local/bin'
-let g:netrw_dirhist_8='/mnt/btrfspool/Drive'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/m.schoeffl/.hammerspoon'
+let g:netrw_dirhist_2='/Volumes/Data/Jobs/MONDI/100936034/400938372/999_Delete_at_Archive/Reference/6276_FD-Ja-_Gefluegel_&_Leber_10er_11012797/RIP FILES/.view/6276_FD-Ja-Gefluegel-Leber_11012797_GF_RIP_C.len'
+let g:netrw_dirhist_3='/Volumes/Data/Jobs/MONDI/100936034/400938372/999_Delete_at_Archive/Reference/6276_FD-Ja-_Gefluegel_&_Leber_10er_11012797/RIP FILES/.view/6276_FD-Ja-Gefluegel-Leber_11012797_GF_RIP_C.len/1'

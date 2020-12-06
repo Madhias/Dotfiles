@@ -22,7 +22,7 @@ PS1="[ \u ] @ [ \h ] \w \$:"
 #alias ls='ls -lah'
 #alias suvim='sudo -E vim'
 
-source ~/.grc/grc.bashrc
+source ~/dotfiles/grc/grc.bashrc
 
 #eval `dircolors ~/.bash.dircolors.tomorrow`
 alias fotos='cd /mnt/btrfspool/Fotos/'

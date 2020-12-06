@@ -12,3 +12,7 @@ export COLOR_BLUE='\e[38;5;075m'
 PS1="\u @ [ \h ] \w \$: "
 
 alias ls='ls -lah'
+
+source ~/.grc/grc.bashrc
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-15.0.1.jdk/Contents/Home

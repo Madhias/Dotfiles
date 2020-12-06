@@ -1,6 +1,7 @@
+local airpods = require('airpods')
+
 -- Define monitor names for layout purposes
-local display_links = "CG21"
-local display_mitte = "CX241"
+local display_oben = "CS2420"
 local display_macbook = "Color LCD"
 
 -- Define Wifi
@@ -17,11 +18,15 @@ hs.window.animationDuration = 0
 hs.window.setShadows(false)
 hs.grid.setMargins({w=10, h=10})
 
+-- Hotkeys to move window layouts
+hs.hotkey.bind(hyper, '4', function() hs.layout.apply(mono_display) end)
+hs.hotkey.bind(hyper, '5', function() hs.layout.apply(dual_display) end)
+
 -- Define windows layouts
 local mono_display = {
-    {"Safari", nil, display_mitte, hs.geometry.unitrect(0.15, 0, 0.7, 1), nil, nil},
-    {"Finder", nil, display_mitte, hs.geometry.unitrect(0, 0.5, 0.5, 0.5), nil, nil},
-    {"Google Chrome", nil, display_mitte, hs.geometry.unitrect(0.15, 0, 0.7, 1), nil, nil},
+    {"Safari", nil, display_oben, hs.geometry.unitrect(0.15, 0, 0.7, 1), nil, nil},
+    {"Finder", nil, display_oben, hs.geometry.unitrect(0, 0.5, 0.5, 0.5), nil, nil},
+    {"Google Chrome", nil, display_oben, hs.geometry.unitrect(0.15, 0, 0.7, 1), nil, nil},
     {"KeePassX", nil, display_macbook, hs.geometry.unitrect(0, 0, 0, 0), nil, nil}
 }
 
@@ -29,7 +34,7 @@ local dual_display = {
 --    {"Safari", nil, display_macbook, hs.layout.maximized, nil, nil}, 
     {"Microsoft Outlook", nil, display_links, hs.geometry.unitrect(0, 0, 1, 1), nil, nil},
     {"Mail", nil, display_links, hs.geometry.unitrect(0, 0.2, 1, 0.8), nil, nil},
-    {"Safari", nil, display_mitte, hs.geometry.unitrect(0.1, 0, 0.8, 1), nil, nil},
+    {"Safari", nil, display_oben, hs.geometry.unitrect(0.1, 0, 0.8, 1), nil, nil},
     {"Finder", nil, display_macbook, hs.geometry.unitrect(0, 0, 1, 1), nil, nil},
     {"KeePassX", nil, display_macbook, hs.geometry.unitrect(0, 0, 0, 0), nil, nil},
     {"Kalender", nil, display_macbook, hs.geometry.unitrect(0.1, 0.1, 0.8, 0.8), nil, nil},
@@ -38,30 +43,27 @@ local dual_display = {
     {"TextEdit", nil, display_macbook, hs.geometry.unitrect(0, 0.5, 0.3, 0.5), nil, nil}
 }
 
--- Hotkeys to move window layouts
-hs.hotkey.bind(hyper, '1', function() hs.layout.apply(mono_display) end)
-hs.hotkey.bind(hyper, '2', function() hs.layout.apply(dual_display) end)
-
--- Hotkeys to move to various screens
-hs.hotkey.bind(hyper, '3', function()
-    local win = hs.window.focusedWindow()
-    if (win) then
-        win:moveToScreen(hs.screen(display_links))
-    end
-end)
-
-hs.hotkey.bind(hyper, '4', function()
-    local win = hs.window.focusedWindow()
-    if (win) then
-        win:moveToScreen(hs.screen(display_mitte))
-    end
-end)
-
-hs.hotkey.bind(hyper, '5', function()
+hs.hotkey.bind(hyper, '1', function()
     local win = hs.window.focusedWindow()
     if (win) then
         win:moveToScreen(hs.screen(display_macbook))
     end
+end)
+
+hs.hotkey.bind(hyper, '2', function()
+    local win = hs.window.focusedWindow()
+    if (win) then
+        win:moveToScreen(hs.screen(display_oben))
+    end
+end)
+
+hs.hotkey.bind(hyper, 'a', nil, function()
+  local ok, output = airpods.toggle('Evan’s AirPods')
+  if ok then
+    hs.alert.show(output)
+  else
+    hs.alert.show("Couldn't connect to AirPods!")
+  end
 end)
 
 -- Reload Config

@@ -1,0 +1,15 @@
+# HomeAssistant
+homeassistant:
+  container_name: home-assistant
+  image: homeassistant/home-assistant
+  volumes:
+    # Local path where your home assistant config will be stored
+    - <local config path>:~/homeassistant/config
+    - /etc/localtime:/etc/localtime:ro
+  restart: unless-stopped
+  network_mode: host
+  depends_on:
+    # MariaDB is optional (only if you would like to use a different database for HA).
+    - mariadb
+  user: "${LOCAL_USER}:${LOCAL_USER}"
+
